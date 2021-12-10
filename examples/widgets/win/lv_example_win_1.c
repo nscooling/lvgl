@@ -4,7 +4,7 @@
 
 static void event_handler(lv_event_t * e)
 {
-    lv_obj_t * obj = lv_event_get_target(e);
+    lv_obj_t * obj __attribute__ ((unused)) = lv_event_get_target(e);
     LV_LOG_USER("Button %d clicked", (int)lv_obj_get_index(obj));
 }
 

@@ -7,7 +7,7 @@ static void event_handler(lv_event_t * e)
     lv_obj_t * obj = lv_event_get_target(e);
     if(code == LV_EVENT_VALUE_CHANGED) {
         uint32_t id = lv_btnmatrix_get_selected_btn(obj);
-        const char * txt = lv_btnmatrix_get_btn_text(obj, id);
+        const char * txt __attribute__ ((unused)) = lv_btnmatrix_get_btn_text(obj, id);
 
         LV_LOG_USER("%s was pressed\n", txt);
     }
